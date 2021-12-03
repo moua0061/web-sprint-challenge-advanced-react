@@ -118,8 +118,20 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What are the main differences between a stateful and a functional component?
 
+    Class Component has the constructor() and render() method in it whereas Functional Components do not have it because it already as the return() method that does what render() do. Class Components uses 'this' and Functional Component do not. Such as passing in props, Class uses this.props.name versus Functional Component uses props.name. 
+
 2. When does a componentWillMount function be called? What about a componentWillUpdate?
+
+    ComponentDidMount is called after the app has rendered. Once it is rendered, then React will mount the data to the app, then the app will re-render again with any changes that were made and update whatever that has been changed. ComponentDidUpdate will be called once a state has been changed. This is called after ComponentDidMount. Once ComponentDidUpdate runs, the app re-renders again. For an example, the user may have deleted an item off their list. This updated list gets updated with ComponentDidUpdate.
 
 3. Define stateful logic.
 
+    Stateful logic is any code or functions that lets you create and change the state. 
+
 4. What are the three step of creating a successful test? What is done in each phase? 
+
+    a) arrange - render the components making sure there's no errors
+      render(<CheckoutForm />)
+    b) act - writing down the steps as a user would do if they're on the page; find the input fields, type it in and click the button
+    
+    c) assert - making sure that everything is displaying in the document with appropriate messages or error messages
